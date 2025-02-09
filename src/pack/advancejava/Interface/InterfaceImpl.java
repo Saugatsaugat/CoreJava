@@ -1,6 +1,6 @@
-package pack.advancejava;
+package pack.advancejava.Interface;
 
-public class InterfaceImpl implements InterfaceExample{
+public class InterfaceImpl implements InterfaceExample {
     @Override
     public void mileage() {
         System.out.println("Interface Signature Method is implemented.");
