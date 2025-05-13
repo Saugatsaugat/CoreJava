@@ -2,6 +2,9 @@ package pack.advancejava.Innnerclass;
 
 abstract class InnerClass{
     public abstract void display();
+    public void greet(){
+        System.out.println("Hi! How are you doing?");
+    }
 }
 public class AnonymousInnerClass {
     public static void main(String[] args) {
@@ -12,5 +15,6 @@ public class AnonymousInnerClass {
             }
         };
         ic.display();
+        ic.greet();
     }
 }
