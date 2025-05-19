@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CopyStream {
+public class CopyCharacters {
     public static void main(String[] args) throws IOException {
         FileReader in = null;
         FileWriter out = null;
