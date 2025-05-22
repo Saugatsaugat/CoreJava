@@ -66,5 +66,13 @@ public class Stream {
             System.out.print(s + "\t");
         });
 
+        // count the state whose length is greater than 3
+        long count = states.stream()
+                .filter(x -> (x.length() > 3))
+                .count();
+        System.out.println("\n\nState length > 3, total is: " + count);
+
+
+
     }
 }
