@@ -8,10 +8,9 @@ Stream:
 
 package pack.advancejava;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Stream {
     public static void main(String[] args) {
@@ -72,7 +71,41 @@ public class Stream {
                 .count();
         System.out.println("\n\nState length > 3, total is: " + count);
 
+        System.out.println("\n\n");
+        Optional<String> first = states.stream().findFirst();
+        System.out.println("First: " + first);
 
+
+        //
+        boolean hasMatch = states.stream().anyMatch(x -> x.startsWith("M"));
+        System.out.println("\nMatched?: " + hasMatch);
+
+        // reduced
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        int sum = numbers.stream().reduce(0, Integer::sum);
+        System.out.println("\nSum : " + sum);
+
+        // primitive streams
+        int[] num = {1, 2, 3, 4, 5};
+        int total = IntStream.of(num).sum();
+        System.out.println("\nTotal: "+ total);
+
+        // join strings
+        List<String> stringList = List.of("Ap", "pl", "e.");
+        String str = stringList.stream().collect(Collectors.joining());
+        System.out.println("Joined String: " + str);
+
+        // group by
+        List<String> fruits = List.of("Apple", "Orange", "Grape", "Pineapple", "Mango", "Avocado", "Banana");
+        Map<Integer, List<String>> groupByLength =
+                fruits.stream()
+                        .collect(Collectors.groupingBy(String::length));
+
+        groupByLength.forEach((integer, strings) -> {
+            System.out.print(integer+": ");
+            strings.stream().forEach(x->System.out.print(x + " "));
+            System.out.println("\n");
+        });
 
     }
 }
