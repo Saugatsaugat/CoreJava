@@ -35,7 +35,17 @@ public class Stream {
                 .filter(x -> x.startsWith("M"))
                 .collect(Collectors.toList());
         System.out.println("/n Filtering the list starting with letter M: \n");
-        for(String str: filteredStateByStartingWithM){
+        for (String str : filteredStateByStartingWithM) {
+            System.out.print(str + "\t");
+        }
+
+        // example of map function
+        List<String> mapStateWithUppercase =
+                states.stream()
+                        .map(String::toUpperCase)
+                        .collect(Collectors.toList());
+        System.out.println("/n Mapping the list with upper case: \n");
+        for (String str : mapStateWithUppercase) {
             System.out.print(str + "\t");
         }
 
