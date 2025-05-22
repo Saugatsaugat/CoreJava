@@ -34,7 +34,7 @@ public class Stream {
         List<String> filteredStateByStartingWithM = states.stream()
                 .filter(x -> x.startsWith("M"))
                 .collect(Collectors.toList());
-        System.out.println("/n Filtering the list starting with letter M: \n");
+        System.out.println("\n\nFiltering the list starting with letter M: ");
         for (String str : filteredStateByStartingWithM) {
             System.out.print(str + "\t");
         }
@@ -44,10 +44,27 @@ public class Stream {
                 states.stream()
                         .map(String::toUpperCase)
                         .collect(Collectors.toList());
-        System.out.println("/n Mapping the list with upper case: \n");
+        System.out.println("\n\nMapping the list with upper case: ");
         for (String str : mapStateWithUppercase) {
             System.out.print(str + "\t");
         }
+
+        // example of sorted
+        List<String> sortedList =
+                states.stream()
+                        .sorted()
+                        .collect(Collectors.toList());
+        System.out.println("\n\nSorted list Using Sort() : ");
+        for (String str : sortedList) {
+            System.out.print(str + "\t");
+        }
+
+
+        // Loop through elements
+        System.out.println("\n\nUsing stream and for each to loop through elements: ");
+        states.stream().forEach(s -> {
+            System.out.print(s + "\t");
+        });
 
     }
 }
