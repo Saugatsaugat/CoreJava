@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     static Connection con = null;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Loaded MySQL JDBC");
@@ -28,6 +28,8 @@ public class DatabaseConnection {
             e.printStackTrace();
         } catch (Exception e){
             e.printStackTrace();
+        } finally{
+            con.close();
         }
     }
 
