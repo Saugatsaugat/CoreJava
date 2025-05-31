@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import pack.database.DatabaseConnection;
-
 public class InsertData {
     static Connection con = null;
     static Statement statement = null;

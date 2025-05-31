@@ -12,7 +12,7 @@ public class RecursionExample1 {
         }
     }
     public static void main(String[] args) {
-        int result = sum(10);
+        result = sum(10);
         System.out.println("Sum is: " + result);
     }
 }

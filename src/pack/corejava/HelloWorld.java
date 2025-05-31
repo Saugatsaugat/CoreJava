@@ -16,5 +16,6 @@ public class HelloWorld {
 
         // greet
         System.out.println(greetingText + " " + name);
+        scanner.close();
     }
 }

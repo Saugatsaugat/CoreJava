@@ -31,6 +31,7 @@ public class Rectangle {
         obj1.getData(length, breadth);
         int area = obj1.getArea();
         System.out.println("The area of the rectangle is " + area);
+        sc.close();
     }
 }
 

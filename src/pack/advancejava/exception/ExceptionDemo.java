@@ -15,6 +15,7 @@ public class ExceptionDemo {
 
             // if the input is integer
             System.out.println("The entered integer value is: " + x);
+            scanner.close();
         }catch(InputMismatchException ex){
             System.out.println("!!!Enter integer value only");
         }

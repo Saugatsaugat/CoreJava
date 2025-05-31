@@ -10,6 +10,7 @@ public class LocalInnerClass {
                 Scanner sc = new Scanner(System.in);
                 int age = sc.nextInt();
                 System.out.println("I am "+age+" years old");
+                sc.close();
             }
         }
         InnerClass inner = new InnerClass();

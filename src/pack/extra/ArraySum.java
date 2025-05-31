@@ -1,8 +1,6 @@
 package pack.extra;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class ArraySum {
     public static void main(String[] args) {

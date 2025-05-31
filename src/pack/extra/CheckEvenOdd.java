@@ -17,6 +17,8 @@ public class CheckEvenOdd {
         } catch (InputMismatchException e) {
             System.out.println("Input mismatch error");
             e.printStackTrace();
+        }finally{
+            sc.close();;
         }
     }
 }

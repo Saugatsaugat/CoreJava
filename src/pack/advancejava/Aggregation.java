@@ -41,6 +41,6 @@ class Employee{
 public class Aggregation {
     public static void main(String[] args){
         Address add = new Address("123 Abc Avenue", "New York", "NY", "10003");
-        Employee em = new Employee("Mr. Thapa", add);
+        new Employee("Mr. Thapa", add);
     }
 }
